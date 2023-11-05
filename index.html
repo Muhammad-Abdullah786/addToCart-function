@@ -6,26 +6,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>YOur Cart</title>
     <style>
-        .content{
-            /* display: inline; */
-        }
-        .title{
-            /* display: inline; */
-        }
+    .main{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .cart{
+      border: 2px solid #504a4a;
+      background-color: antiquewhite;
+      border-radius: 13px;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .product{
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      border-radius: 12px  ; 
+      width: 300px;
+      height: 400px;
+      margin: 12px  12px  12px  12px ;
+      padding: 12px 12px 12px 12px ;
+      border: 6px solid   #ccc;
+     }
+     .bar{
+      height: 80px;
+     }
     </style>
 </head>
 <body>
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
-            <h5 class="text-white h4 title">Your cart is Empty</h5>
-            <span class="text-muted content"><b>TOTAL</b>.</span>
-            <span class="text-muted content"><b>$0.00</b>.</span>
+            <h5 class="text-white h4" id="nameOfCart">Your cart is Empty</h5>
+            <span class="text-muted"><b>TOTAL</b>.</span>
+            <span class="text-muted"><b>$0.00</b>.</span>
           </div>
         </div>
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-dark bg-dark bar">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="cart-index">Cart</span>
           </button>
         </nav>
       </div>
