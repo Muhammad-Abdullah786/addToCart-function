@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>YOur Cart</title>
     <style>
+      #nameOfProduct{
+        font-size: 20px;
+      }
+      #spanNumericValue{
+        font-size: 14px;
+      }
+      #spanTotalAmmount{
+        font-size: 14px
+      }
+
     .main{
       display: flex;
       flex-direction: row;
@@ -35,9 +45,9 @@
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
-            <h5 class="text-white h4" id="nameOfCart">Your cart is Empty</h5>
-            <span class="text-muted"><b>TOTAL</b>.</span>
-            <span class="text-muted"><b>$0.00</b>.</span>
+            <h6 class="text-white h4" id="nameOfProduct">Your cart is Empty</h6>
+            <span class="text-muted" id="spanTotalAmmount"><b>TOTAL</b>.</span>
+            <span class="text-muted" id="spanNumericValue"><b>$0.00</b>.</span>
           </div>
         </div>
         <nav class="navbar navbar-dark bg-dark bar">
