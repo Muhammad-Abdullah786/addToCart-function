@@ -1,0 +1,80 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    float: right;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  /* //////////////////////////////////////^^^^^ above is for side panel */
+  #nameOfProduct{
+    font-size: 20px;
+  }
+  #spanNumericValue{
+    font-size: 14px;
+  }
+  #spanTotalAmmount{
+    font-size: 14px
+  }
+
+.main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cart{
+  border: 2px solid #504a4a;
+  background-color: antiquewhite;
+  border-radius: 13px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.product{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 12px  ; 
+  width: 300px;
+  height: 400px;
+  margin: 12px  12px  12px  12px ;
+  padding: 12px 12px 12px 12px ;
+  border: 6px solid   #ccc;
+ }
+ .bar{
+  height: 80px;
+ }
+ .cartImg{
+  border: 2px solid #ccc;
+  border-radius: 9px;
+ }
+ .cartProductBox{
+  display: flex;
+ }

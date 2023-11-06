@@ -1,13 +1,31 @@
+// side panel
+function openNav() {
+    let sidePanel = document.getElementById('mySidepanel')
+    sidePanel.style.width = "356px";
+    sidePanel.style.height = "756px";
+    
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+
+
+
+
+
+
+
 let products = [
-    {imgSrc : "../assets/pic.jpg",title : "Macbook", description : "Premium Quality", price: '$89.99'},
-    {imgSrc : "../assets/iphone.jpg",title : "Iphone 99", description : "Premium Quality", price: '$89.99'},
-    {imgSrc : "../assets/sam.jpg",title : "Samsung 11.2", description : "Premium Quality", price: '$89.99'},
-    {imgSrc : "../assets/gaming.webp",title : "Gaming PC", description : "Premium Quality", price: '$89.99'},
-    {imgSrc : "../assets/lip.jpg",title : "lipistick", description : "Premium Quality", price: '$89.99'},
-    {imgSrc : "../assets/sampoo.jpg",title : "Shampoo", description : "Premium Quality", price: '$89.99'},
-    {imgSrc : "../assets/conditioner.jpg",title : "Conditioner", description : "Premium Quality", price: '$89.99'},
-    {imgSrc : "../assets/potato.svg",title : "Potato", description : "Premium Quality", price: '$89.99'},
-    {imgSrc : "../assets/apple.jpg",title : "Apple", description : "Premium Quality", price : '$89.99'}
+    {imgSrc : "../assets/pic.jpg",title : "Macbook", description : "Premium Quality", price: 99},
+    {imgSrc : "../assets/iphone.jpg",title : "Iphone 99", description : "Premium Quality", price: 99},
+    {imgSrc : "../assets/sam.jpg",title : "Samsung 11.2", description : "Premium Quality", price: 99},
+    {imgSrc : "../assets/gaming.webp",title : "Gaming PC", description : "Premium Quality", price: 99},
+    {imgSrc : "../assets/lip.jpg",title : "lipistick", description : "Premium Quality", price: 99},
+    {imgSrc : "../assets/sampoo.jpg",title : "Shampoo", description : "Premium Quality", price: 99},
+    {imgSrc : "../assets/conditioner.jpg",title : "Conditioner", description : "Premium Quality", price: 99},
+    {imgSrc : "../assets/potato.svg",title : "Potato", description : "Premium Quality", price: 99},
+    {imgSrc : "../assets/apple.jpg",title : "Apple", description : "Premium Quality", price : 99}
 ];
 let mainDiv = document.getElementsByClassName('main')[0];
 products.forEach(function(product){
@@ -58,11 +76,17 @@ let nameOfProduct = document.getElementById('nameOfProduct');
 
 // }
 function addProduct(product){
+    if(product.addEventListener){
+        
+    }
+    let cartDiv = document.createElement("div");
+    cartDiv.setAttribute("class", 'cartProductBox');
     let img = document.createElement("img");
     img.src = product.imgSrc;
     img.alt = "Product Image";
-    img.style.width = '30px';
-    img.style.height = '60px';
+    img.style.width = '40px';
+    img.style.height = '40px';
+    img.setAttribute("class", 'cartImg')
 
     let title = document.createElement("p");
     title.textContent = product.title;
