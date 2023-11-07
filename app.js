@@ -27,15 +27,17 @@ let products = [
     {imgSrc : "../assets/potato.svg",title : "Potato", description : "Premium Quality", price: 99},
     {imgSrc : "../assets/apple.jpg",title : "Apple", description : "Premium Quality", price : 99}
 ];
+
 let mainDiv = document.getElementsByClassName('main')[0];
 products.forEach(function(product){
+   
     let card = document.createElement("div");
     let img = document.createElement("img");
     let title = document.createElement("h2");
     let detail = document.createElement("p");
     // i have to make addToCart button too
     let addToCart = document.createElement("button");
-    
+    let priceNode = document.createElement("p");
     
     img.src = product.imgSrc;
     img.alt = "Product Image";
@@ -43,7 +45,8 @@ products.forEach(function(product){
     img.style.height = '60%';
     title.textContent = product.title
     detail.textContent = product.description
-    
+    priceNode.innerHTML = product.price;
+    // card.appendChild(priceNode);
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(detail);
@@ -55,42 +58,47 @@ products.forEach(function(product){
     addToCart.addEventListener('click', ()=>{// onclick will not work
         addProduct(product)
     })
+    // i will use JSON to put the products in the cart and in the local storage
+
     
     
     mainDiv.appendChild(card);
     
     
 });
-let nameOfProduct = document.getElementById('nameOfProduct');
-// function addProduct(product){ // the reason product function will not work because it's inside the foreach function 
-//     let img = document.createElement("img");
-//     img.src = product.imgSrc;
-//     img.alt = "Product Image";
-//     img.style.width = '30px';
-//     img.style.height = '60px';
-//     img.appendChild(nameOfProduct);
-//     nameOfProduct.innerHTML += "<br>" + product.title + img.src
-
-//         console.log("added", product, nameOfProduct);
-
-
-// }
+let newproductAdded = document.getElementById('mySidepanel')
+let productAvailable = true
+if (product.length === 0) {
+    let availableProducts = document.getElementById('noProductMessage')
+    availableProducts.style.display = 'block';
+     productAvailable = false;
+}
 function addProduct(product){
-    if(product.addEventListener){
-        
-    }
-    let cartDiv = document.createElement("div");
+    // if addToCart is false then show span that tell there is not product available
+    // if (!productAvailable) {
+    //     let availableProducts = document.getElementById('noProductMessage')
+    //     availableProducts.style.display = 'none';
+    //     productAvailable = true
+    // }else{ 
+
+    let priceCart = document.createElement('span')
+    let cartDiv = document.createElement("ul");
     cartDiv.setAttribute("class", 'cartProductBox');
     let img = document.createElement("img");
     img.src = product.imgSrc;
-    img.alt = "Product Image";
+    img.alt = "Cart Product Image";
     img.style.width = '40px';
     img.style.height = '40px';
     img.setAttribute("class", 'cartImg')
 
-    let title = document.createElement("p");
+    let title = document.createElement("li");
     title.textContent = product.title;
 
-    nameOfProduct.innerHTML += "<br>" + title.outerHTML + img.outerHTML;
+    cartDiv.appendChild(img) 
+    cartDiv.appendChild(title);
+    cartDiv.appendChild(priceCart) 
+    
+    newproductAdded.appendChild(cartDiv);
+    localStorage.setItem('products', JSON.stringify(product));
     console.log("Product added: ", product);
-}
+    }

@@ -75,6 +75,26 @@ body {
   border: 2px solid #ccc;
   border-radius: 9px;
  }
+.sidepanel li{
+  font-size: 12px;
+  list-style: none;
+  /* display: flex; */
+
+}
+.sidepanel{
+  color: white;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+ 
+} 
  .cartProductBox{
   display: flex;
+  align-items: center;
+  /* justify-content:space-between; */
  }
+#noProductMessage{
+  font-size: 30px;
+  color: white;
+  display: none;
+}
