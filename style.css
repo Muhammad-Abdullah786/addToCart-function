@@ -98,3 +98,12 @@ body {
   color: white;
   display: none;
 }
+.priceTag{
+  float: right;
+  font-size: 15px;
+  background-color: #504a4a;
+  color: #ffffff;
+  padding: 4px 10px;
+  border: 2px solid #555;
+  border-radius: 12px;
+}
