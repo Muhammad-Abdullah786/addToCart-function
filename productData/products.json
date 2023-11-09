@@ -1,0 +1,22 @@
+{
+ products = [
+        {imgSrc : "../assets/pic.jpg",title : "Macbook", description : "Premium Quality", price: 99, quantity: 0
+        },
+        {imgSrc : "../assets/iphone.jpg",title : "Iphone 99", description : "Premium Quality", price: 99, quantity: 0
+        },
+        {imgSrc : "../assets/sam.jpg",title : "Samsung 11.2", description : "Premium Quality", price: 99, quantity: 0
+        },
+        {imgSrc : "../assets/gaming.webp",title : "Gaming PC", description : "Premium Quality", price: 99, quantity: 0
+        },
+        {imgSrc : "../assets/lip.jpg",title : "lipistick", description : "Premium Quality", price: 99, quantity: 0
+        },
+        {imgSrc : "../assets/sampoo.jpg",title : "Shampoo", description : "Premium Quality", price: 99, quantity: 0
+        },
+        {imgSrc : "../assets/conditioner.jpg",title : "Conditioner", description : "Premium Quality", price: 99, quantity: 0
+        },
+        {imgSrc : "../assets/potato.svg",title : "Potato", description : "Premium Quality", price: 99, quantity: 0
+        },
+        {imgSrc : "../assets/apple.jpg",title : "Apple", description : "Premium Quality", price : 9, quantity: 09
+        }
+    ];
+}
